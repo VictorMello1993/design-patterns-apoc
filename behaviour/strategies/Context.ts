@@ -12,7 +12,7 @@ export class Context {
   }
 
   public doSomethingAlgorithm(): void {
-    console.log("Context: Sorting data using Strategy")
     const result = this.strategy.doSomething(['a', 'b', 'c', 'd', 'e', 'f'])
+    console.log(result.join(','))
   }
 }

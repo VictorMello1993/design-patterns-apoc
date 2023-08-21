@@ -1,3 +1,3 @@
 export interface Strategy {
-  doSomething(data: []): string[]
+  doSomething(data: string[]): string[]
 }

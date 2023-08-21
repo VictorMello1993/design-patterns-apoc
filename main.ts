@@ -1,3 +1,6 @@
+import { Context } from "./behaviour/strategies/Context";
+import { ReverseDataStrategy } from "./behaviour/strategies/ReverseDataStrategy";
+import { SortDataStrategy } from "./behaviour/strategies/SortDataStrategy";
 import { BycicleFactory } from "./creational/factory-method/factories/BycicleFactory";
 import { CarFactory } from "./creational/factory-method/factories/CarFactory";
 import { EmailValidatorProtocol } from "./structural/adapter/EmailValidatorProtocol";
@@ -50,6 +53,15 @@ productBox.add(anotherProductBox)
 
 console.log(productBox)
 console.log(productBox.getPrice())
+
+// STRATEGY
+const context = new Context(new SortDataStrategy())
+context.doSomethingAlgorithm()
+console.log('')
+
+console.log('Reversing data...')
+context.setStrategy(new ReverseDataStrategy())
+context.doSomethingAlgorithm()
 
 
 
